@@ -33,9 +33,31 @@ app.use(morgan('dev')); // Logging
 app.use(express.json()); // Parse json bodies
 
 // Routes //
-//Test
+
 app.get('/', (req, res) => {
     res.send('This is a test! Did it pass?');
+});
+
+// Astro index route
+app.get('/astrocollection', async (req, res) => {
+    try {
+        // Send all user's astrology pictures
+        res.json(await astro.find({}));
+    } catch (error) {
+        // Send error
+        res.status(400).json(error);
+    }
+});
+
+// Astro create route
+app.post('/astrocollection', async (req, res) => {
+    try {
+        // Send all user's astrology pictures
+        res.json(await astro.create(req.body));
+    } catch (error) {
+        // Send error
+        res.status(400).json(error);
+    }
 });
 
 // Listener
