@@ -60,5 +60,15 @@ app.post('/astrocollection', async (req, res) => {
     }
 });
 
+app.delete('/astrocollection/:id', async (req, res) => {
+    try {
+        // Send all pictures
+        res.json(await astro.findByIdAndDelete(req.params.id));
+    } catch (error) {
+        // Send error
+        res.status(400).json(error);
+    }
+});
+
 // Listener
 app.listen(PORT, () => console.log("I'm listening on PORT " + PORT + "!"));
