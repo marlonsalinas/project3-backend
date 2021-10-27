@@ -60,6 +60,7 @@ app.post('/astrocollection', async (req, res) => {
     }
 });
 
+// Astro delete route
 app.delete('/astrocollection/:id', async (req, res) => {
     try {
         // Send all pictures
