@@ -1,5 +1,7 @@
 # project3-backend
 
+Introduction: Stargazer is a web app that allows you to store your pictures of the night sky into a personal collection, and let's you view's NASA's Astronomy Picture of the Day
+
 Technologies used: HTML, CSS. Javascript, React, MongoDB/Mongoose, Express, Node
 
 Getting started: https://hardcore-pike-a05bf0.netlify.app/
