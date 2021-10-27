@@ -64,7 +64,7 @@ app.post('/astrocollection', async (req, res) => {
 app.delete('/astrocollection/:id', async (req, res) => {
     try {
         // Send all pictures
-        res.json(await astro.findByIdAndDelete(req.params.id));
+        res.json(await astro.findByIdAndRemove(req.params.id));
     } catch (error) {
         // Send error
         res.status(400).json(error);
